@@ -1,0 +1,37 @@
+{% extends 'base.html.twig'%}
+{% block title%}Articles {% endblock title%}
+{% block body %}
+<style>
+</style>
+
+<div class="example-wrapper">
+    <h1>Salut {{ name }}! </h1>
+<p class="text-danger">c'est la page acceuil</p>
+{%if articles%}
+
+{% for article in articles%}
+<p class="row">
+  <div class="card" style="width: 18rem;">
+  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <img src="{{article.image}}" class=""/>
+    <a href="show/{{article.id}}">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{article.titre}}</h5>
+    <p class="card-text">{{article.description}}</p>
+    <hr>
+<p class="text-danger h3">{{article.prix}}</p>
+    <a href="articles/delete/{{article.id}}" class="btn btn-primary">Delete</a>
+    <a href="articles/update/{{article.id}}" class="btn btn-primary">update</a>
+
+  </div>
+</div>
+</p>
+{%endfor%}
+{%else%}
+pas de de articles
+{%endif%}
+</div>
+{% endblock %}

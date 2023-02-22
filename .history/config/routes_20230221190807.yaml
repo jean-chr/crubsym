@@ -1,0 +1,11 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+index:
+    path: /
+    controller: App\Controller\IndexController::Home
+articles:
+    path: /articles/save
+    controller: App\Controller\IndexController::Save

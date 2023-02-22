@@ -1,0 +1,24 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+index:
+    path: /
+    controller: App\Controller\IndexController::Home
+
+urlsave:
+    path: /articles/save
+    controller: App\Controller\IndexController::Save
+
+show:
+    path: /articles/show/{id}
+    controller: App\Controller\IndexController::Show
+
+newarticle:
+    path: /articles/new
+    controller: App\Controller\IndexController::New
+
+updatearticle:
+    path: /articles/update/{id}
+    controller: App\Controller\IndexController::Update

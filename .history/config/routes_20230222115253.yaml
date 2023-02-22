@@ -1,0 +1,15 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+index:
+    path: /
+    controller: App\Controller\IndexController::Home
+
+urlsave:
+    path: /articles/save
+show:                      GET        ANY      ANY    /articles/show/{id}
+newarticle:                GET|POST   ANY      ANY    /articles/new
+updatearticle:
+    path: /articles/update/{id}

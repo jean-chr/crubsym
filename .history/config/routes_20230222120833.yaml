@@ -1,0 +1,35 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+index:
+    path: /
+    controller: App\Controller\IndexController::Home
+
+articles_list:
+    path: /articles
+    controller: App\Controller\IndexController::Home
+    methods: GET|HEAD
+
+articles_save:
+    path: /articles/save
+    controller: App\Controller\IndexController::Save
+    methods: GET|HEAD
+
+articles_show:
+    path: /articles/show/{id}
+    controller: App\Controller\IndexController::Show
+    methods: GET|HEAD
+    
+articles_new:
+    path: /articles/new
+    controller: App\Controller\IndexController::New
+    methods: GET|HEAD
+
+articles_update:
+    path: /articles/update/{id}
+    controller: App\Controller\IndexController::Update
+    methods: GET|HEAD
+

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig'%}
+{% block title%}Articles {% endblock title%}
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Salut {{ name }}! </h1>
+<p class="text-danger">c'est la page acceuil</p>
+{%if articles%}
+<p class="list-group list-group-numbered">
+{% for article in articles%}
+  <span class="list-group-item" >
+  <a class="" href="show/{{article.id}}">{{article.titre}}</a>
+  {{article.prix}}
+  {{article.contenu}}
+   {{article.prix}}
+   <img src="{{article.image}}" alt="{{article.image}}" class="img-responsive" style="max-width:50px" />
+   </span>
+{%endfor%}
+</p>
+{%else%}
+pas de de articles
+{%endif%}
+</div>
+{% endblock %}

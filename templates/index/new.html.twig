@@ -1,0 +1,9 @@
+{% extends 'base.html.twig'%}
+{% block title%}new Articles {% endblock title%}
+{% block body %}
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+{{ form_end(form) }}
+<a href="/"> back</a>
+{% endblock %}
